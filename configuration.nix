@@ -103,6 +103,7 @@
     vesktop
     lshw
     git
+    gh
   ];
 
   programs.steam.enable = true;
