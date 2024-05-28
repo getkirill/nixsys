@@ -23,7 +23,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ];
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ]; # some cool namespaces
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -97,9 +97,10 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
-  networking.firewall.allowedUDPPorts = [ 67 68 ];
+#   networking.firewall.allowedUDPPorts = [ 67 68 ]; # allow through dhcp
+#   networking.nat.enable = true;
   # Or disable the firewall altogether.
-#   networking.firewall.enable = false;
+  networking.firewall.enable = false; # disable it, i was able to live just fine without firewall on arch (it's not like my router doesn't have it already)
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
