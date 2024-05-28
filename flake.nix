@@ -14,6 +14,7 @@
         # so the old configuration file still takes effect
         ./configuration.nix
         ./hosts/kraskaska-laptop/hardware-configuration.nix
+        ./hosts/kraskaska-laptop/configuration.nix
       ];
     };
   };
