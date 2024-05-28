@@ -50,7 +50,10 @@
     enable = true;
     pulse.enable = true;
   };
-  services.displayManager.sddm.enable = true;
+#   services.displayManager.sddm.enable = true;
+  services.xserver.displayManager.lightdm = {
+    enable = true;
+  };
   services.desktopManager.plasma6.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
