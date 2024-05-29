@@ -82,6 +82,7 @@
     git
     gh
     alacritty
+    xorg.xev
   ];
 
   programs.steam.enable = true;
