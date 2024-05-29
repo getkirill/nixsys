@@ -83,6 +83,7 @@
     gh
     alacritty
     xorg.xev
+    rofi
   ];
 
   programs.steam.enable = true;
@@ -92,6 +93,10 @@
     configFile = ./bspwmrc;
     sxhkd.configFile = ./sxhkdrc;
   };
+
+  #programs.rofi = {
+  #  enable = true;
+  #};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

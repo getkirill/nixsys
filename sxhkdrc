@@ -9,3 +9,6 @@ super + alt + {q,r}
 
 alt + {_,shift + }F4
     bspc node -{c,k}
+
+alt + space
+    rofi -show combi -combi-modes "window,run" -modes combi
