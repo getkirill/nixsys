@@ -2,10 +2,10 @@ super + Return
     alacritty
 
 super + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 super + alt + {q,r}
-	bspc {quit,wm -r}
+    bspc {quit,wm -r}
 
-alt + {_,shift + } f4
-	bspc node -{c,k}
+alt + {_,shift + }F4
+    bspc node -{c,k}
