@@ -81,9 +81,16 @@
     lshw
     git
     gh
+    alacritty
   ];
 
   programs.steam.enable = true;
+
+  services.xserver.windowManager.bspwm = {
+    enable = true;
+    configFile = ./bspwmrc;
+    sxhkd.configFile = ./sxhkdrc;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
