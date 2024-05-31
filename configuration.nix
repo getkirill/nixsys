@@ -41,6 +41,10 @@
       accelProfile = "flat";
     };
   };
+  services.xserver.xkb = {
+    layout = "us,ru";
+    options = "grp:win_space_toggle";
+  };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
