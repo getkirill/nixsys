@@ -91,6 +91,8 @@
     rofi
     racket
     feh
+    picom
+    neofetch
   ];
 
   programs.steam.enable = true;
