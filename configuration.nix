@@ -95,11 +95,7 @@
 
   programs.steam.enable = true;
 
-  services.xserver.windowManager.bspwm = {
-    enable = true;
-    configFile = ./bspwmrc;
-    sxhkd.configFile = ./sxhkdrc;
-  };
+  services.xserver.windowManager.bspwm.enable = true; # bspwm + sxhkd
 
   #programs.rofi = {
   #  enable = true;
