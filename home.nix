@@ -8,7 +8,10 @@
     enable = true;
     extraConfig = (builtins.readFile ./bspwmrc);
   };
-  
+  services.sxhkd = {
+    enable = true;
+    extraConfig = (builtins.readFile ./sxhkdrc);
+  };
   home.stateVersion = "24.11"; # no touchy! >:(
   programs.home-manager.enable = true;
 }
