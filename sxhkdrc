@@ -16,6 +16,15 @@ alt + space
 super + {Left,Down,Up,Right}
     bspc node --swap {west,south,north,east}
 
+super + ctrl + {Left,Down,Up,Right}
+    bspc node -n {west,south,north,east}.!automatic
+
+super + shift + {Left,Down,Up,Right}
+    bspc node -z {left,bottom,top,right} 12
+
+super + alt + {Left,Down,Up,Right}
+    bspc node -p ~{west,south,north,east}
+
 super + plus
     bspc monitor -a "$(rofi -dmenu)"
 
@@ -30,3 +39,6 @@ super + bracket{left,right}
 
 super + r
     bspc node @/ -R 90
+
+super + b
+    bspc node @/ -B
