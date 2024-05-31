@@ -89,6 +89,7 @@
     alacritty
     xorg.xev
     rofi
+    racket
   ];
 
   programs.steam.enable = true;

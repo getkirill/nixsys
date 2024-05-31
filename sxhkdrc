@@ -12,3 +12,21 @@ alt + {_,shift + }F4
 
 alt + space
     rofi -show combi -combi-modes "window,run" -modes combi
+
+super + {Left,Down,Up,Right}
+    bspc node --swap {west,south,north,east}
+
+super + plus
+    bspc monitor -a "$(rofi -dmenu)"
+
+super + minus
+    bspc desktop -r
+
+super + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+
+alt + shift + space
+    rofi -show window -window-command "bspc node {window} -d focused"
+
+super + r
+    bspc node @/ -R 90
