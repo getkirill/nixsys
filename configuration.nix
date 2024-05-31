@@ -72,6 +72,7 @@
   #     firefox
   #     tree
   #   ];
+     shell = pkgs.zsh;
   };
   nixpkgs.config.allowUnfree = true; # who thought it was a good idea to set this to false by default???????
 
@@ -95,6 +96,7 @@
     neofetch
   ];
 
+  programs.zsh.enable = true;
   programs.steam.enable = true;
 
   services.xserver.windowManager.bspwm.enable = true; # bspwm + sxhkd

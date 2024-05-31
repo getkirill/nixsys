@@ -16,6 +16,15 @@
     enable = true;
     inactiveOpacity = 0.8;
   };
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      theme = "avit";
+    };
+  };
+
   home.stateVersion = "24.11"; # no touchy! >:(
   programs.home-manager.enable = true;
 }
