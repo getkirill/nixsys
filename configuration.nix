@@ -90,6 +90,7 @@
     xorg.xev
     rofi
     racket
+    feh
   ];
 
   programs.steam.enable = true;
