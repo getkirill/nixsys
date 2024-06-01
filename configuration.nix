@@ -101,6 +101,7 @@
     vscode-fhs
     polybar
     killall
+    SDL2
   ];
 
   programs.zsh.enable = true;
