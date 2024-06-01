@@ -16,6 +16,11 @@
     enable = true;
     inactiveOpacity = 0.8;
   };
+  services.polybar = {
+    enable = true;
+    extraConfig = (builtins.readFile ./polybar.ini);
+    script = "polybar bar &";
+  };
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;

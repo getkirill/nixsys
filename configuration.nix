@@ -98,6 +98,9 @@
     feh
     picom
     neofetch
+    vscode-fhs
+    polybar
+    killall
   ];
 
   programs.zsh.enable = true;
