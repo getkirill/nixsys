@@ -24,10 +24,16 @@
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
+    initExtra = ''
+      export XDG_DATA_HOME="$HOME/.local/share"
+    '';
     oh-my-zsh = {
       enable = true;
       theme = "avit";
     };
+  };
+  home.file.".local/share/applications/steam.desktop" = {
+    source = ./steam-offload.desktop;
   };
 
   home.stateVersion = "24.11"; # no touchy! >:(
