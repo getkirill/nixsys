@@ -71,7 +71,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.kraskaska = {
      isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "libvirtd" ]; # Enable ‘sudo’ for the user.
   #   packages = with pkgs; [
   #     firefox
   #     tree
@@ -101,7 +101,8 @@
     vscode-fhs
     polybar
     killall
-    SDL2
+    virglrenderer
+    prismlauncher
   ];
 
   programs.zsh.enable = true;
@@ -120,6 +121,23 @@
     enable = true;
     enableSSHSupport = true;
   };
+  
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        #packages = [(pkgs.unstable.OVMF.override {
+        #  secureBoot = true;
+        #  tpmSupport = true;
+        #}).fd];
+      };
+    };
+  };
+  programs.virt-manager.enable = true;
 
   # List services that you want to enable:
 
