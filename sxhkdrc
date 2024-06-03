@@ -28,8 +28,8 @@ super + shift + alt + {Left,Down,Up,Right}
 super + alt + {Left,Down,Up,Right}
     bspc node -p ~{west,south,north,east}
 
-super + plus
-    bspc monitor -a "$(rofi -dmenu)"
+super + {equal,plus}
+    bspc monitor -a "{_,$(rofi -dmenu)}"
 
 super + minus
     bspc desktop -r
