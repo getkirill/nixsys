@@ -103,6 +103,12 @@
     killall
     virglrenderer
     prismlauncher
+    qbittorrent
+    _7zz
+    wine
+    wine64
+    jdk21
+    lm_sensors
   ];
 
   programs.zsh.enable = true;
