@@ -109,6 +109,13 @@
     wine64
     jdk21
     lm_sensors
+    zip
+    unzip
+    dotnet-sdk
+    jetbrains.idea-community
+    obs-studio
+    ffmpeg
+    #itch
   ];
 
   programs.zsh.enable = true;
