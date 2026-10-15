@@ -2,14 +2,17 @@
   flake.nixosConfigurations.chitose = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       host__chitose
-      
+
       user__kraskaska
-      
+
       common
       systemd-boot
       timezone-chicago
       network-manager
       ssh-server
+
+      kde
+      kde-display-manager
     ];
   };
   flake.nixosModules.host__chitose =
@@ -28,9 +31,8 @@
       system.stateVersion = "25.11";
       nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-
       # hardware
-      
+
       boot.initrd.availableKernelModules = [
         "ata_piix"
         "uhci_hcd"

@@ -1,5 +1,5 @@
-{...}: {
-	flake.nixosModules.timezone-chicago = {...}: {
-		time.timeZone = "America/Chicago";	
-	};
+{ ... }: {
+  flake.nixosModules.timezone-chicago = { ... }: {
+    time.timeZone = "America/Chicago";
+  };
 }
